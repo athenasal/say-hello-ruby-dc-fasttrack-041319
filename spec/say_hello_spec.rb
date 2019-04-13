@@ -2,13 +2,13 @@ require_relative './spec_helper'
 
 describe "say_hello" do 
   
-  it (name, greet = "Hello") do
-    expect($stdout).to receive(:puts).with("Hello Kent Beck!")
+  def say_hello (name) do
+    puts "Hello, #{name}!"
     say_hello("Kent Beck")
   end
 
-  it (name = "Ruby programmer") do
-    expect($stdout).to receive(:puts).with("Hello Ruby Programmer!")
+ def say_hello (name = "Ruby programmer") do
+    puts "Hello Ruby Programmer!"
     say_hello()
   end
 end
